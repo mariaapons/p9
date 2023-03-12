@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p8_layout web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display:grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            grid-template-rows: 12.5% 25% 37.5% 25%;
+            row-gap: 0.5em;
+            column-gap: 0.5em;
+        }
+        nav, header, main, aside, footer{
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+        }
+        nav{
+            grid-column-start: 1;
+            grid-column-end: 7;
+            background-color: blueviolet;
+        }
+        header{
+            grid-column: 1/7;
+            background-color: green;
+        }
+        main{
+            grid-column: 1/6;
+            background-color: aqua;
+        }
+        aside{
+            grid-column: 6/7;
+            background-color: yellow;
+        }
+        footer{
+            grid-column: 1/7;
+            background-color: pink;
+        } 
+        @media screen and (max-width: 834px){
+            main{
+                background-color: black;
+            }
+            .container{
+                grid-template-columns: auto auto auto auto;
+                grid-template-rows: 11.11% 22.22% 33.33% 11.11% 22.22%;
+            }
+            nav{
+                grid-column: 1/5;
+            }
+            header{
+                grid-column: 1/5;
+            }
+            main{
+                grid-column: 1/5;
+            }
+            aside{
+                grid-column: 1/5;
+            }
+            footer{
+                grid-column: 1/5;
+            }
+        }
+        @media screen and (max-width: 375px){
+            main{
+                background-color: aliceblue;
+            }
+            .container{
+                grid-template-columns: auto auto auto auto;
+                grid-template-rows: 11.11% 22.22% 33.33% 11.11% 22.22%;
+            }
+            nav{
+                grid-column: 1/4;
+            }
+            header{
+                grid-column: 1/4;
+            }
+            main{
+                grid-column: 1/4;
+            }
+            aside{
+                grid-column: 1/4;
+            }
+            footer{
+                grid-column: 1/4;
+            }
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <nav>
+        <p>menu nav</p>
+    </nav>
+    <header>
+        <p>header</p>
+    </header>
+    <main>
+        <p>main content</p>
+    </main>
+    <aside>
+        <p>aside</p>
+    </aside>
+    <footer>
+        <p>footer</p>
+    </footer>
+   </div>
+</body>
+</html>
